@@ -1,5 +1,11 @@
+import AddCar from "./AddCar";
+
 function Car() {
-  return <div>Car</div>;
+  return (
+    <>
+      <AddCar />
+    </>
+  );
 }
 
 export default Car;

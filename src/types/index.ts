@@ -1,6 +1,12 @@
 export type Slot = {
-  id: number;
+  slot_no: number;
   created_at: string;
   occupied: boolean;
-  slot_no: number;
+};
+
+export type Vehicle = {
+  license_no: string;
+  car_owner_name: string;
+  created_at: string;
+  slot_occupied: Slot;
 };

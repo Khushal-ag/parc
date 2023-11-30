@@ -5,7 +5,8 @@ function Stat({
 }: {
   icon: React.ReactNode;
   title: string;
-  value: string;
+    value: string;
+
 }) {
   return (
     <div className="flex items-center justify-start gap-4 rounded-md bg-slate-200 px-4 py-3">

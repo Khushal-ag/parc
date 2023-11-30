@@ -9,6 +9,7 @@ import {
   getBikeSlots,
   getCarSlots,
 } from "@/lib/services/apiSlots";
+import Loader from "./ui/Loader";
 import Stat from "./ui/Stat";
 
 function Stats() {
@@ -54,7 +55,7 @@ function Stats() {
     isCarSlotsAvailableLoading ||
     isBikeSlotsAvailableLoading
   )
-    return <div>Loading...</div>;
+    return <Loader />;
 
   if (
     carSlotErrors ||

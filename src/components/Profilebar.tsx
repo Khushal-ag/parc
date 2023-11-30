@@ -2,11 +2,11 @@ import { LogOut, User, User2 } from "lucide-react";
 
 function Profilebar() {
   return (
-    <div className="h-[8%] w-full rounded-sm bg-gray-300">
+    <div className="h-[8%] w-full rounded-sm bg-gray-200">
       <div className="flex items-center justify-between px-8 py-4">
         <div className="flex items-center gap-3">
           <User />
-          <p className="text-xl">John Doe</p>
+          <p className="text-xl">Admin</p>
         </div>
         <div className="flex items-center gap-4">
           <div>
