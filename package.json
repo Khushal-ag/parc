@@ -1,5 +1,5 @@
 {
-  "name": "nextjs-template",
+  "name": "parc",
   "version": "0.1.0",
   "private": true,
   "author": {
@@ -25,7 +25,8 @@
     "next-auth": "^4.24.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-hot-toast": "^2.4.1"
+    "react-hot-toast": "^2.4.1",
+    "recharts": "^2.10.3"
   },
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "^4.1.1",
