@@ -18,6 +18,7 @@ export const getAvailableCarSlots = async () => {
     .select("*")
     .eq("occupied", "false");
   if (error) throw error;
+  data.sort((a, b) => a.slot_no - b.slot_no);
   return data;
 };
 

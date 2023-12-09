@@ -3,10 +3,10 @@
 import { MouseEventHandler, useState } from "react";
 import { Plus } from "lucide-react";
 
-import { addCarUser } from "@/lib/services/apiCarPark";
+import { addBikeUser } from "@/lib/services/apiBikePark";
 import RegisterForm from "@/components/RegisterForm";
 
-function AddCar() {
+function AddBike() {
   const [isModalOpen, setModalOpen] = useState(false);
 
   const openModal: MouseEventHandler<HTMLButtonElement> = () => {
@@ -23,18 +23,18 @@ function AddCar() {
           onClick={openModal}
           className="flex items-center gap-1 rounded-md bg-blue-500 px-4 py-2 text-lg font-medium text-white hover:bg-blue-600 focus:border-blue-300 focus:outline-none focus:ring"
         >
-          <Plus size={22} className="font-bold"/>
-          Add Car
+          <Plus size={22} className="font-bold" />
+          Add Bike
         </button>
       </div>
       <RegisterForm
         isOpen={isModalOpen}
         onClose={closeModal}
-        MutationFn={addCarUser}
-        type="Car"
+        MutationFn={addBikeUser}
+        type="Bike"
       />
     </>
   );
 }
 
-export default AddCar;
+export default AddBike;
