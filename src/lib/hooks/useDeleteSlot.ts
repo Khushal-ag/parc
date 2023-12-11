@@ -10,7 +10,7 @@ export function useDeleteSlot({
 }) {
   const queryClient = useQueryClient();
 
-  const { mutate: deleteSlot, isLoading: isDeleting } = useMutation({
+  const { mutate: deleteSlot, isPending: isDeleting } = useMutation({
     mutationFn: mutateFn,
     onSuccess: () => {
       toast.success("Slot removed successfully");

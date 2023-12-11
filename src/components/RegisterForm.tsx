@@ -1,5 +1,5 @@
 // components/Modal.tsx
-import { ChangeEvent, FormEvent, MouseEventHandler, useState } from "react";
+import { ChangeEvent, FormEvent, useState } from "react";
 import { Vehicle } from "@/types";
 import { X } from "lucide-react";
 
@@ -7,7 +7,7 @@ import { useCreateNewVehicle } from "@/lib/hooks/useCreateNewVehicle";
 
 interface ModalProps {
   isOpen: boolean;
-  onClose: MouseEventHandler<HTMLDivElement>;
+  onClose: () => void;
   MutationFn: ({
     license_no,
     username,
@@ -25,14 +25,14 @@ const RegisterForm = ({ isOpen, onClose, MutationFn, type }: ModalProps) => {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     createNewVehicle({ license_no: licenseNumber, username: ownerName });
-    onClose(e as any);
+    onClose();
   };
 
   const handleOutsideClick = (
     e: React.MouseEvent<HTMLDivElement, MouseEvent>
   ) => {
     if (e.target === e.currentTarget) {
-      onClose(e);
+      onClose();
     }
   };
 
@@ -69,9 +69,7 @@ const RegisterForm = ({ isOpen, onClose, MutationFn, type }: ModalProps) => {
                   id="licenseNumber"
                   name="licenseNumber"
                   value={licenseNumber}
-                  onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                    setLicenseNumber(e.target.value)
-                  }
+                  onChange={(e) => setLicenseNumber(e.target.value)}
                   className="mt-2 w-full rounded-md border px-5 py-3"
                   required
                 />

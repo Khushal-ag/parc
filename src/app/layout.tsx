@@ -1,5 +1,3 @@
-import type { Metadata } from "next";
-
 import "@/styles/globals.css";
 
 import { Toaster } from "react-hot-toast";
@@ -8,7 +6,7 @@ import Profilebar from "@/components/Profilebar";
 import Providers from "@/components/Providers";
 import Sidebar from "@/components/Sidebar";
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "ParC",
   description:
     "ParC is an automated parking system that allows users to find parking slots automatically by scanning their license plate.",

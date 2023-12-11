@@ -1,6 +1,6 @@
 "use client";
 
-import { MouseEventHandler, useState } from "react";
+import { useState } from "react";
 import { Plus } from "lucide-react";
 
 import { addBikeUser } from "@/lib/services/apiBikePark";
@@ -9,11 +9,11 @@ import RegisterForm from "@/components/RegisterForm";
 function AddBike() {
   const [isModalOpen, setModalOpen] = useState(false);
 
-  const openModal: MouseEventHandler<HTMLButtonElement> = () => {
+  const openModal = () => {
     setModalOpen(true);
   };
 
-  const closeModal: MouseEventHandler<HTMLDivElement> = () => {
+  const closeModal = () => {
     setModalOpen(false);
   };
   return (

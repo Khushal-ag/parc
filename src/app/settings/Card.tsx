@@ -59,7 +59,7 @@ function Card({
                 deleteSlot(value);
               }}
               type="danger"
-              disabled={isDeleting ? true : false}
+              disabled={isDeleting}
             >
               <Trash size={24} className="me-2" />
               Delete Slot

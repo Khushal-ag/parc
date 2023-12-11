@@ -11,7 +11,7 @@ export function useCreateSlot({
 }) {
   const queryClient = useQueryClient();
 
-  const { mutate: createSlot, isLoading: isCreating } = useMutation({
+  const { mutate: createSlot, isPending: isCreating } = useMutation({
     mutationFn: mutateFn,
     onSuccess: () => {
       toast.success("Slot added successfully");

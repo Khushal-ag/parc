@@ -55,7 +55,8 @@ export const deleteCarSlot = async (slot: number) => {
   const { data, error } = await supabase
     .from("car_slot")
     .delete()
-    .eq("slot_no", `${slot}`);
+    .eq("slot_no", `${slot}`)
+    .eq("occupied", "false");
   if (error) throw error;
   return data;
 };
@@ -64,7 +65,8 @@ export const deleteBikeSlot = async (slot: number) => {
   const { data, error } = await supabase
     .from("bike_slot")
     .delete()
-    .eq("slot_no", `${slot}`);
+    .eq("slot_no", `${slot}`)
+    .eq("occupied", "false");
   if (error) throw error;
   return data;
 };

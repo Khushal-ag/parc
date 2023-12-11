@@ -65,8 +65,6 @@ function Stats() {
   )
     return <div>Error</div>;
 
-  console.log(carSlots, bikeSlots, carSlotsAvailable, bikeSlotsAvailable);
-
   return (
     <div className="flex items-center justify-around gap-2 py-2">
       <Stat

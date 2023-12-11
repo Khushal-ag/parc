@@ -2,7 +2,7 @@
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
-function Providers({ children }: { children: React.ReactNode }) {
+function Providers({ children }: React.PropsWithChildren) {
   const queryClient = new QueryClient({
     defaultOptions: {
       queries: {

@@ -18,7 +18,7 @@ export function useCreateNewVehicle({
 }) {
   const queryClient = useQueryClient();
 
-  const { mutate: createNewVehicle, isLoading: isCreating } = useMutation({
+  const { mutate: createNewVehicle, isPending: isCreating } = useMutation({
     mutationFn: mutateFn,
     onSuccess: () => {
       toast.success("Vehicle added successfully");
