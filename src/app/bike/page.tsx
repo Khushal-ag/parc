@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { Camera, Search } from "lucide-react";
 import toast from "react-hot-toast";
 
 import {
@@ -9,12 +10,17 @@ import {
   removeBikeSlot,
 } from "@/lib/services/apiBikePark";
 import { getAvailableBikeSlots } from "@/lib/services/apiSlots";
+import Button from "@/components/ui/Button";
 import AddBike from "./AddBike";
 import ParkBike from "./ParkBike";
 import UnParkBike from "./UnParkBike";
 
 function Bike() {
   const [licensePlate, setLicencePlate] = useState("");
+
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [stream, setStream] = useState<MediaStream | null>(null);
 
   const handlePark = async () => {
     try {
@@ -58,21 +64,78 @@ function Bike() {
     }
   };
 
+  const handleScanButtonClick = async () => {
+    try {
+      const mediaStream = await navigator.mediaDevices.getUserMedia({
+        video: true,
+      });
+      if (videoRef.current) {
+        videoRef.current.srcObject = mediaStream;
+      }
+      setStream(mediaStream);
+    } catch (error) {
+      console.error("Error accessing camera:", error);
+    }
+  };
+
+  const handleCaptureButtonClick = () => {
+    if (!canvasRef.current || !videoRef.current || !stream) return;
+
+    const canvas = canvasRef.current;
+    const video = videoRef.current;
+    const context = canvas.getContext("2d");
+
+    if (context) {
+      context.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+      // Convert canvas image to data URL
+      const imageDataUrl = canvas.toDataURL("image/jpeg");
+      console.log(imageDataUrl);
+      stream.getTracks().forEach((track) => track.stop());
+      setStream(null);
+
+      // Send imageDataUrl to backend API for processing
+      // You can use fetch or axios to make a POST request to your backend API
+    }
+  };
+
   return (
     <>
       <section className="flex h-full flex-col items-center justify-center gap-4">
-        <input
-          type="text"
-          placeholder="Enter Licence plate no.."
-          className="min-w-max rounded-md border-2 px-2 py-3"
-          value={licensePlate}
-          onChange={(e) => setLicencePlate(e.target.value)}
-        />
-        <ParkBike onPark={handlePark} />
+        <div className="flex w-full justify-center gap-4">
+          <input
+            type="text"
+            placeholder="Enter Licence plate no.."
+            className="w-1/3 rounded-md border-2 px-2 py-3"
+            value={licensePlate}
+            onChange={(e) => setLicencePlate(e.target.value)}
+          />
+          <Button type="primary" onPress={handleScanButtonClick}>
+            <Search size={22} className="mr-2" />
+            Scan
+          </Button>
+          {stream && (
+            <Button type="primary" onPress={handleCaptureButtonClick}>
+              <Camera size={22} className="mr-2" />
+              Capture
+            </Button>
+          )}
+        </div>
+        <div className="flex w-1/2 justify-center gap-3">
+          <ParkBike onPark={handlePark} />
 
-        <UnParkBike onUnpark={removePark} />
+          <UnParkBike onUnpark={removePark} />
 
-        <AddBike />
+          <AddBike />
+        </div>
+        <div className="flex min-w-min">
+          <canvas ref={canvasRef} style={{ display: "none" }} />
+          <video
+            ref={videoRef}
+            autoPlay
+            style={{ display: "block", width: "100%" }}
+          />
+        </div>
       </section>
     </>
   );
