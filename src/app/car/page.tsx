@@ -65,6 +65,7 @@ function Car() {
   };
 
   const handleScanButtonClick = async () => {
+    videoRef.current!.style.display = "block";
     try {
       const mediaStream = await navigator.mediaDevices.getUserMedia({
         video: true,
@@ -78,12 +79,13 @@ function Car() {
     }
   };
 
-  const handleCaptureButtonClick = () => {
+  const handleCaptureButtonClick = async () => {
     if (!canvasRef.current || !videoRef.current || !stream) return;
 
     const canvas = canvasRef.current;
     const video = videoRef.current;
     const context = canvas.getContext("2d");
+    video.style.display = "none";
 
     if (context) {
       context.drawImage(video, 0, 0, canvas.width, canvas.height);
@@ -93,6 +95,17 @@ function Car() {
       console.log(imageDataUrl);
       stream.getTracks().forEach((track) => track.stop());
       setStream(null);
+
+      const data = await fetch("http://localhost:5000/api/upload", {
+        method: "POST",
+        body: JSON.stringify({ image: imageDataUrl }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      const result = (await data.json()) as { extractedText: string };
+      console.log(result);
+      setLicencePlate(result.extractedText);
 
       // Send imageDataUrl to backend API for processing
       // You can use fetch or axios to make a POST request to your backend API
