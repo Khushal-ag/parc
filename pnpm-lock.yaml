@@ -18,8 +18,8 @@ importers:
         specifier: ^2.1.1
         version: 2.1.1
       lucide-react:
-        specifier: ^0.427.0
-        version: 0.427.0(react@18.3.1)
+        specifier: ^0.428.0
+        version: 0.428.0(react@18.3.1)
       next:
         specifier: 14.2.5
         version: 14.2.5(@babel/core@7.24.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -46,8 +46,8 @@ importers:
         specifier: ^0.5.1
         version: 0.5.1
       '@types/node':
-        specifier: ^20.14.15
-        version: 20.14.15
+        specifier: ^20.16.1
+        version: 20.16.1
       '@types/react':
         specifier: ^18.3.3
         version: 18.3.3
@@ -71,7 +71,7 @@ importers:
         version: 9.1.0(eslint@8.57.0)
       eslint-plugin-tailwindcss:
         specifier: ^3.17.4
-        version: 3.17.4(tailwindcss@3.4.9)
+        version: 3.17.4(tailwindcss@3.4.10)
       postcss:
         specifier: ^8.4.41
         version: 8.4.41
@@ -82,11 +82,11 @@ importers:
         specifier: ^0.6.6
         version: 0.6.6(@ianvs/prettier-plugin-sort-imports@4.3.1(prettier@3.3.3))(prettier@3.3.3)
       tailwind-merge:
-        specifier: ^2.5.0
-        version: 2.5.0
+        specifier: ^2.5.2
+        version: 2.5.2
       tailwindcss:
-        specifier: ^3.4.9
-        version: 3.4.9
+        specifier: ^3.4.10
+        version: 3.4.10
       typescript:
         specifier: ^5.5.4
         version: 5.5.4
@@ -405,8 +405,8 @@ packages:
   '@types/json5@0.0.29':
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
 
-  '@types/node@20.14.15':
-    resolution: {integrity: sha512-Fz1xDMCF/B00/tYSVMlmK7hVeLh7jE5f3B7X1/hmV0MJBwE27KlS7EvD/Yp+z1lm8mVhwV5w+n8jOZG8AfTlKw==}
+  '@types/node@20.16.1':
+    resolution: {integrity: sha512-zJDo7wEadFtSyNz5QITDfRcrhqDvQI1xQNQ0VoizPjM/dVAODqqIUWbJPkvsxmTI0MYRGRikcdjMPhOssnPejQ==}
 
   '@types/phoenix@1.6.4':
     resolution: {integrity: sha512-B34A7uot1Cv0XtaHRYDATltAdKx0BvVKNgYNqE4WjtPUa4VQJM7kxeXcVKaH+KS+kCmZ+6w+QaUdcljiheiBJA==}
@@ -1416,8 +1416,8 @@ packages:
     resolution: {integrity: sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA==}
     engines: {node: '>=10'}
 
-  lucide-react@0.427.0:
-    resolution: {integrity: sha512-lv9s6c5BDF/ccuA0EgTdskTxIe11qpwBDmzRZHJAKtp8LTewAvDvOM+pTES9IpbBuTqkjiMhOmGpJ/CB+mKjFw==}
+  lucide-react@0.428.0:
+    resolution: {integrity: sha512-rGrzslfEcgqwh+TLBC5qJ8wvVIXhLvAIXVFKNHndYyb1utSxxn9rXOC+1CNJLi6yNOooyPqIs6+3YCp6uSiEvg==}
     peerDependencies:
       react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0-rc
 
@@ -1962,11 +1962,11 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
-  tailwind-merge@2.5.0:
-    resolution: {integrity: sha512-a6Q/isR5XAo9IR7Hjh80BQDkn8PG9ONJpSO/U3vGzdKyKG125lPHNXdiPfeQ5X0EOG0qKlS/0qnxdBYkLlD6tA==}
+  tailwind-merge@2.5.2:
+    resolution: {integrity: sha512-kjEBm+pvD+6eAwzJL2Bi+02/9LFLal1Gs61+QB7HvTfQQ0aXwC5LGT8PEt1gS0CWKktKe6ysPTAy3cBC5MeiIg==}
 
-  tailwindcss@3.4.9:
-    resolution: {integrity: sha512-1SEOvRr6sSdV5IDf9iC+NU4dhwdqzF4zKKq3sAbasUWHEM6lsMhX+eNN5gkPx1BvLFEnZQEUFbXnGj8Qlp83Pg==}
+  tailwindcss@3.4.10:
+    resolution: {integrity: sha512-KWZkVPm7yJRhdu4SRSl9d4AK2wM3a50UsvgHZO7xY77NQr2V+fIrEuoDGQcbvswWvFGbS2f6e+jC/6WJm1Dl0w==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -2045,8 +2045,8 @@ packages:
   unbox-primitive@1.0.2:
     resolution: {integrity: sha512-61pPlCD9h51VoreyJ0BReideM3MDKMKnh6+V9L08331ipq6Q8OFXZYiqP6n/tbHx4s5I9uRhcye6BrbkizkBDw==}
 
-  undici-types@5.26.5:
-    resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
+  undici-types@6.19.6:
+    resolution: {integrity: sha512-e/vggGopEfTKSvj4ihnOLTsqhrKRN3LeO6qSN/GxohhuRv8qH9bNQ4B8W7e/vFL+0XTnmHPB4/kegunZGA4Org==}
 
   update-browserslist-db@1.0.15:
     resolution: {integrity: sha512-K9HWH62x3/EalU1U6sjSZiylm9C8tgq2mSvshZpqc7QE69RaA2qjhkW2HlNA0tFpEbtyFz7HTqbSdN4MSwUodA==}
@@ -2489,9 +2489,9 @@ snapshots:
 
   '@types/json5@0.0.29': {}
 
-  '@types/node@20.14.15':
+  '@types/node@20.16.1':
     dependencies:
-      undici-types: 5.26.5
+      undici-types: 6.19.6
 
   '@types/phoenix@1.6.4': {}
 
@@ -2508,7 +2508,7 @@ snapshots:
 
   '@types/ws@8.5.10':
     dependencies:
-      '@types/node': 20.14.15
+      '@types/node': 20.16.1
 
   '@typescript-eslint/eslint-plugin@7.18.0(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint@8.57.0)(typescript@5.5.4)':
     dependencies:
@@ -3215,11 +3215,11 @@ snapshots:
       semver: 6.3.1
       string.prototype.matchall: 4.0.11
 
-  eslint-plugin-tailwindcss@3.17.4(tailwindcss@3.4.9):
+  eslint-plugin-tailwindcss@3.17.4(tailwindcss@3.4.10):
     dependencies:
       fast-glob: 3.3.2
       postcss: 8.4.41
-      tailwindcss: 3.4.9
+      tailwindcss: 3.4.10
 
   eslint-scope@7.2.2:
     dependencies:
@@ -3680,7 +3680,7 @@ snapshots:
     dependencies:
       yallist: 4.0.0
 
-  lucide-react@0.427.0(react@18.3.1):
+  lucide-react@0.428.0(react@18.3.1):
     dependencies:
       react: 18.3.1
 
@@ -4200,9 +4200,9 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
-  tailwind-merge@2.5.0: {}
+  tailwind-merge@2.5.2: {}
 
-  tailwindcss@3.4.9:
+  tailwindcss@3.4.10:
     dependencies:
       '@alloc/quick-lru': 5.2.0
       arg: 5.0.2
@@ -4313,7 +4313,7 @@ snapshots:
       has-symbols: 1.0.3
       which-boxed-primitive: 1.0.2
 
-  undici-types@5.26.5: {}
+  undici-types@6.19.6: {}
 
   update-browserslist-db@1.0.15(browserslist@4.23.0):
     dependencies:
