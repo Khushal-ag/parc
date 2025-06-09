@@ -17,10 +17,10 @@
     "fmt:write": "prettier --write \"**/*.{ts,tsx,mdx,json}\" --cache"
   },
   "dependencies": {
-    "@supabase/supabase-js": "^2.49.8",
-    "@tanstack/react-query": "^5.79.0",
+    "@supabase/supabase-js": "^2.50.0",
+    "@tanstack/react-query": "^5.80.6",
     "clsx": "^2.1.1",
-    "lucide-react": "^0.511.0",
+    "lucide-react": "^0.513.0",
     "next": "14.2.29",
     "next-auth": "^4.24.11",
     "react": "^18.3.1",
@@ -31,7 +31,7 @@
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "^4.4.2",
     "@total-typescript/ts-reset": "^0.6.1",
-    "@types/node": "^20.17.57",
+    "@types/node": "^20.19.0",
     "@types/react": "^18.3.23",
     "@types/react-dom": "^18.3.7",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
