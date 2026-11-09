@@ -17,8 +17,8 @@
     "fmt:write": "prettier --write \"**/*.{ts,tsx,mdx,json}\" --cache"
   },
   "dependencies": {
-    "@supabase/supabase-js": "^2.118.0",
-    "@tanstack/react-query": "^5.105.1",
+    "@supabase/supabase-js": "^2.119.0",
+    "@tanstack/react-query": "^5.107.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.577.0",
     "next": "14.2.35",
